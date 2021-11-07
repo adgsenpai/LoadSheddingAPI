@@ -647,5 +647,3 @@ https://loadshedding.eskom.co.za/LoadShedding/GetScheduleM/63591/2/9/271
     16:00 - 18:30
     Wed, 07 Oct
     00:00 - 02:30
-    Find Print schedule
-
