@@ -1,6 +1,6 @@
 # LoadSheddingAPI
 
-![EskomLogo](https://www.bloemfonteincourant.co.za/wp-content/uploads/2017/02/Eskom-Logo.jpg)
+<img src="https://www.bloemfonteincourant.co.za/wp-content/uploads/2017/02/Eskom-Logo.jpg" height="400px"> 
 
 #### this a a repo that creates a simplified REST API for adgstudios.co.za - to return Eskom Load Shedding Data or alternatively a PyPi Package.
 
@@ -18,5 +18,5 @@
 ###### On production, while under production feel free to view the documentation to help you on how to use the data that i am bootstrapping from.
 
 
-### Copyright ADGSTUDIOS (c) 2021
+### Copyright (c) ADGSTUDIOS 2021
 
