@@ -15,7 +15,7 @@
 
 
 
-###### On production
+###### On production, while under production feel free to view the documentation to help you on how to use the data that i am bootstrapping from.
 
 
 ### Copyright ADGSTUDIOS (c) 2021
