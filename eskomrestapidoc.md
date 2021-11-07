@@ -649,8 +649,3 @@ https://loadshedding.eskom.co.za/LoadShedding/GetScheduleM/63591/2/9/271
     00:00 - 02:30
     Find Print schedule
 
-* * *
-
-* * *
-
-* * *
