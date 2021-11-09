@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>EskomRestAPI</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://adgstudios.co.za/static/img/favicon.ico">
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+  </head>
+
+  <body>
+    <div class="page-wrap">
+      <div class="row">
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+          <nav id="navbar" class="navbar-movil navbar-expand-sm">
+            <header class="title"><img src="https://user-images.githubusercontent.com/45560312/140890864-9a1280ae-091c-432a-aa89-ad0a4f064df7.png" height="120px">REST API</header>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMini"
+              aria-controls="navMini" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMini">
+              <ul class="nav flex-column mt-4">
+                <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#PythonUsage">Python Usage</a></li>
+                <li class="nav-item"><a class="nav-link" href="#WebUsage">Web Hooks</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Acknowledgments">Acknowledgments</a></li>
+              </ul>
+            </div>
+          </nav>
+          <section class="footer-wrap">
+
+          </section>
+        </div>
+        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7">
+          <main id="main-doc">
+            <section class="main-section" id="Introduction">
+              <header>Introduction</header>
+              <hr>
+              <article>
+                <p>
+                  this is a repo that creates a simplified REST API for adgstudios.co.za - to return Eskom Load Shedding
+                  Data or alternatively a PyPi Package.
+                </p>
+                <h6>Why did i make this API?</h6>
+
+                <li>My computer runs 24/7 due to load shedding it messes that up! I got a UPS that gives me 15 minutes
+                  failover but i require my UPS to power my router for 3 hours. I need my computer to be off before the
+                  Load Shedding Time. </li>
+                <li>
+                  Maybe gonna design a cool web application to display the eskom loadshedding status with cookies etc?
+                  </l1>
+                <li>
+                  Build an easier Rest API than Eskom for open source developers to use because the current one is not formatted properly.
+                  </l1>
+
+                  <p>
+                    <br>
+                    <br>
+                    but the first point is the main reason why i built the API it is to solve my Computer/UPS Issue.
+                  </p>
+              </article>
+            </section>
+            <section class="main-section" id="PythonUsage">
+              
+              <header><img src="http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" height="50px">  Python Usage</header>
+              <hr>
+              <h3>Installation</h3>
+              <li>First install Package - It requires requests module and BS4 module</li>
+              <code>pip install EskomAPI</code>
+              <h3>Importing</h3>
+              <br>
+              <code> from EskomAPI import eskom </code>
+              <h3>Usage</h3>
+              <br>
+              <li>Get Current Load Shedding Status</li>
+              <code>eskom.ReturnLoadSheddingStatus()</code>
+              <p>Returns string object with current number of load shedding example '1'</p>
+              <br>
+              <li>Get Municipalities in Given Province</li>
+              <code>eskom.GetMunicipalities(id)</code>
+              <br>
+              <li>Get SuburbData</li>
+              <code>eskom.GetSuburbData(id)</code>
+              <p>where id is 340<br> the Municipality ID it returns a json object with information</p>
+              <code>
+                //JSON
+                {'Results': [{'Tot': 0, 'id': '1057925', 'text': 'Alexandra'},
+                {'Tot': 0, 'id': '1057926', 'text': 'Amerika'},
+                {'Tot': 0, 'id': '1057927', 'text': 'Appelsdrif'},
+                {'Tot': 0, 'id': '1057928', 'text': 'Argonauta Park'},
+                {'Tot': 0, 'id': '1057929', 'text': 'Arniston'},
+                {'Tot': 0, 'id': '1057930', 'text': 'Asfontein'},
+                {'Tot': 0, 'id': '1057931', 'text': 'Baadjieskraal'},
+                {'Tot': 0, 'id': '1057932', 'text': 'Badenhof'},
+                {'Tot': 0, 'id': '1057933', 'text': 'Bailestock'},
+                {'Tot': 0, 'id': '1057934', 'text': 'Bergplaas'},
+                {'Tot': 0, 'id': '1057935', 'text': 'Bietorivier'},
+                {'Tot': 0, 'id': '1057936', 'text': 'Blaauwklip'},
+                {'Tot': 0, 'id': '1057937', 'text': 'Blomfontein'},
+                {'Tot': 0, 'id': '1057938', 'text': 'Bodrif'},
+                {'Tot': 0, 'id': '1057939', 'text': 'Bosheuwel'},
+                {'Tot': 0, 'id': '1057940', 'text': 'Boskloof'},
+                {'Tot': 0, 'id': '1069079', 'text': 'Boskloof Bredasdorp'},
+                {'Tot': 0, 'id': '1069080', 'text': 'Boskloof Caledon'},
+                {'Tot': 0, 'id': '1057941', 'text': 'Bo-Vogelvlei'},
+                {'Tot': 0, 'id': '1057942', 'text': 'Brakfontein'},
+                {'Tot': 0, 'id': '1057943', 'text': 'Brakkloof'},
+                {'Tot': 0, 'id': '1057944', 'text': 'Bredasdorp'},
+                {'Tot': 0, 'id': '1057945', 'text': 'Bredasdorp Nature Reserve'},
+                {'Tot': 0, 'id': '1057946', 'text': 'Bruinklip'},
+                {'Tot': 0, 'id': '1057947', 'text': 'Buffelsfontein'},
+                {'Tot': 0, 'id': '1057948', 'text': 'Coetzeeskraal'},
+                {'Tot': 0, 'id': '1057949', 'text': 'Cupidoskraal'},
+                {'Tot': 0, 'id': '1057950', 'text': 'Die Draai'},
+                {'Tot': 0, 'id': '1057951', 'text': 'Die Hoogte'},
+                {'Tot': 0, 'id': '1057952', 'text': 'Die Kop'},
+                {'Tot': 0, 'id': '1057953', 'text': 'Die Mond'},
+                {'Tot': 0, 'id': '1057954', 'text': 'Die Poort'},
+                {'Tot': 0, 'id': '1057955', 'text': 'Die Withuis'},
+                {'Tot': 0, 'id': '1057956', 'text': 'Doornkraal'},
+                {'Tot': 0, 'id': '1057957', 'text': 'Driefontein'},
+                {'Tot': 0, 'id': '1057958', 'text': 'Drodkloof'},
+                {'Tot': 0, 'id': '1057959', 'text': 'Drodmelkbos'},
+                {'Tot': 0, 'id': '1057960', 'text': 'Elandsdrift'},
+                {'Tot': 0, 'id': '1057961', 'text': 'Elandskloof'},
+                {'Tot': 0, 'id': '1057962', 'text': 'Elandspad'},
+                {'Tot': 0, 'id': '1057963', 'text': 'Elandsvlei'},
+                {'Tot': 0, 'id': '1057964', 'text': 'Elim'},
+                {'Tot': 0, 'id': '1069081', 'text': 'Elim Bredasdorp'},
+                {'Tot': 700, 'id': '1069082', 'text': 'Elim Stanford'},
+                {'Tot': 0, 'id': '1057965', 'text': 'Ewenaarskloof'},
+                {'Tot': 0, 'id': '1057966', 'text': 'Fairfield'},
+                {'Tot': 0, 'id': '1057967', 'text': 'Fairview'},
+                {'Tot': 0, 'id': '1057968', 'text': 'Filandshoogte'},
+                {'Tot': 0, 'id': '1057969', 'text': 'Giliomeesdal'},
+                {'Tot': 0, 'id': '1057970', 'text': 'Goede Hoop'},
+                {'Tot': 0, 'id': '1057971', 'text': 'Graauwheuwel'},
+                {'Tot': 0, 'id': '1057972', 'text': 'Grashoek'},
+                {'Tot': 0, 'id': '1057973', 'text': 'Grasrug'},
+                {'Tot': 0, 'id': '1057974', 'text': 'Grootzoe'},
+                {'Tot': 0, 'id': '1057975', 'text': 'Halfaampieskraal'},
+                {'Tot': 0, 'id': '1057976', 'text': 'Hamerkop'},
+                {'Tot': 0, 'id': '1057977', 'text': 'Hangnes'},
+                {'Tot': 0, 'id': '1057978', 'text': 'Hansiesrivier'},
+                {'Tot': 0, 'id': '1057979', 'text': 'Hardevlakte'},
+                {'Tot': 0, 'id': '1057980', 'text': 'Hassiesdrift'},
+                {'Tot': 0, 'id': '1057981', 'text': 'Helderfontein'},
+                {'Tot': 0, 'id': '1057982', 'text': 'Hermanusheuwel'},
+                {'Tot': 0, 'id': '1057983', 'text': 'Heuningrug'},
+                {'Tot': 0, 'id': '1057984', 'text': 'Holdrift'},
+                {'Tot': 0, 'id': '1057985', 'text': 'Hotagterklip'},
+                {'Tot': 0, 'id': '1057986', 'text': 'Inhoek'},
+                {'Tot': 0, 'id': '1057987', 'text': 'Jacobsdam'},
+                {'Tot': 0, 'id': '1057988', 'text': 'Jonaskraal'},
+                {'Tot': 0, 'id': '1057989', 'text': 'Kamasiekraal'},
+                {'Tot': 0, 'id': '1057990', 'text': 'Karnmelkrivier'},
+                {'Tot': 0, 'id': '1057991', 'text': 'Karsrivier'},
+                {'Tot': 0, 'id': '1057992', 'text': 'Kleiheuwel'},
+                {'Tot': 0, 'id': '1057993', 'text': 'Klein Pietersieliesrivier'},
+                {'Tot': 0, 'id': '1057994', 'text': 'Kleinberg'},
+                {'Tot': 0, 'id': '1057995', 'text': 'Kleinplaats'},
+                {'Tot': 0, 'id': '1057996', 'text': 'Kleinsanddrif'},
+                {'Tot': 0, 'id': '1057997', 'text': 'Kleinsoutrivier'},
+                {'Tot': 0, 'id': '1057998', 'text': 'Klipbank'},
+                {'Tot': 0, 'id': '1057999', 'text': 'Klipbankskloof'},
+                {'Tot': 0, 'id': '1058000', 'text': 'Klipdale'},
+                {'Tot': 0, 'id': '1058001', 'text': 'Klipdrift'},
+                {'Tot': 0, 'id': '1058002', 'text': 'Klipfontein'},
+                {'Tot': 0, 'id': '1058003', 'text': 'Koranna'},
+                {'Tot': 0, 'id': '1058004', 'text': 'Kydoedie'},
+                {'Tot': 0, 'id': '1058005', 'text': 'Kykoedie'},
+                {'Tot': 0, 'id': '1058006', 'text': "L'Agulhas"},
+                {'Tot': 0, 'id': '1058007', 'text': 'Langhoogte'},
+                {'Tot': 0, 'id': '1058008', 'text': 'Langverwagt'},
+                {'Tot': 0, 'id': '1058009', 'text': 'Langvlei'},
+                {'Tot': 0, 'id': '1058010', 'text': 'Leeurivier'},
+                {'Tot': 0, 'id': '1058011', 'text': 'Lekkerwater'},
+                {'Tot': 0, 'id': '1058012', 'text': 'M(reson'},
+                {'Tot': 0, 'id': '1058013', 'text': 'Magdala'},
+                {'Tot': 0, 'id': '1058014', 'text': 'Malanershoogte'},
+                {'Tot': 0, 'id': '1058015', 'text': 'Marino'},
+                {'Tot': 0, 'id': '1058016', 'text': 'Martha'},
+                {'Tot': 0, 'id': '1058017', 'text': 'Matjieskloof'},
+                {'Tot': 0, 'id': '1058018', 'text': 'Melkbosch'},
+                {'Tot': 0, 'id': '1058019', 'text': 'Melkkamer'},
+                {'Tot': 0, 'id': '1058020', 'text': 'Meulvlei'},
+                {'Tot': 0, 'id': '1058021', 'text': 'Mierkraal'},
+                {'Tot': 0, 'id': '1058022', 'text': 'Moddervlei'},
+                {'Tot': 0, 'id': '1058023', 'text': 'Moerasfontein'},
+                {'Tot': 0, 'id': '1058024', 'text': 'Molshoop'},
+                {'Tot': 0, 'id': '1058025', 'text': 'Morgenzon'},
+                {'Tot': 0, 'id': '1058026', 'text': 'Muurkraal'},
+                {'Tot': 0, 'id': '1058027', 'text': 'Nachtwacht'},
+                {'Tot': 0, 'id': '1058028', 'text': 'Napier'},
+                {'Tot': 0, 'id': '1058029', 'text': 'Napier Town'},
+                {'Tot': 0, 'id': '1058030', 'text': 'Noetsie'},
+                {'Tot': 0, 'id': '1058031', 'text': 'Nooitgedacht'},
+                {'Tot': 0, 'id': '1058032', 'text': 'Nuysty'},
+                {'Tot': 0, 'id': '1058033', 'text': 'Onder-Schietpad'},
+                {'Tot': 0, 'id': '1058034', 'text': 'Oordamsfontein'},
+                {'Tot': 0, 'id': '1058035', 'text': 'Ordesan'},
+                {'Tot': 0, 'id': '1058036', 'text': 'Oskop'},
+                {'Tot': 0, 'id': '1058037', 'text': 'Oudebakoven'},
+                {'Tot': 0, 'id': '1058038', 'text': 'Patryskraal'},
+                {'Tot': 0, 'id': '1058039', 'text': 'Perdekamp'},
+                {'Tot': 0, 'id': '1058040', 'text': 'Potberg'},
+                {'Tot': 0, 'id': '1058041', 'text': 'Prinskraal'},
+                {'Tot': 0, 'id': '1058042', 'text': 'Protem'},
+                {'Tot': 0, 'id': '1058043', 'text': 'Quarrie'},
+                {'Tot': 0, 'id': '1058044', 'text': 'Reimerskraal'},
+                {'Tot': 0, 'id': '1058045', 'text': 'Remhoogte'},
+                {'Tot': 0, 'id': '1069083', 'text': 'Remhoogte Bredasdorp'},
+                {'Tot': 0, 'id': '1069084', 'text': 'Remhoogte Caledon'},
+                {'Tot': 0, 'id': '1069085', 'text': 'Remhoogte Klipdale'},
+                {'Tot': 0, 'id': '1058046', 'text': 'Rheboksvlei'},
+                {'Tot': 0, 'id': '1058047', 'text': 'Rhenosterfontein'},
+                {'Tot': 0, 'id': '1058048', 'text': 'Rietfontein'},
+                {'Tot': 0, 'id': '1058049', 'text': 'Riverside'},
+                {'Tot': 0, 'id': '1058050', 'text': 'Rondefontein'},
+                {'Tot': 0, 'id': '1058051', 'text': 'Rondeheuwel'},
+                {'Tot': 0, 'id': '1058052', 'text': 'Rooivlei'},
+                {'Tot': 0, 'id': '1058053', 'text': 'Rose Villa'},
+                {'Tot': 0, 'id': '1058054', 'text': 'Ryspunt'},
+                {'Tot': 0, 'id': '1058055', 'text': 'Sanddrif'},
+                {'Tot': 0, 'id': '1058056', 'text': 'Sandfontein'},
+                {'Tot': 0, 'id': '1058057', 'text': 'Sans Souci'},
+                {'Tot': 0, 'id': '1058058', 'text': 'Skihaven'},
+                {'Tot': 0, 'id': '1058059', 'text': 'Skipskop'},
+                {'Tot': 0, 'id': '1058060', 'text': 'Sonop'},
+                {'Tot': 0, 'id': '1058061', 'text': 'Soutbos'},
+                {'Tot': 0, 'id': '1058062', 'text': 'Soutkloof'},
+                {'Tot': 0, 'id': '1058063', 'text': 'Soutkuil'},
+                {'Tot': 0, 'id': '1058064', 'text': 'Soutpansvlakte'},
+                {'Tot': 0, 'id': '1058065', 'text': 'Sparrekloof'},
+                {'Tot': 0, 'id': '1058066', 'text': 'Springerskuil'},
+                {'Tot': 0, 'id': '1058067', 'text': 'Springfield'},
+                {'Tot': 0, 'id': '1069086', 'text': 'Stompieskloof'},
+                {'Tot': 0, 'id': '1058068', 'text': 'Struis Bay'},
+                {'Tot': 0, 'id': '1058069', 'text': 'Suidestrand'},
+                {'Tot': 0, 'id': '1058070', 'text': 'Swartjeskop'},
+                {'Tot': 0, 'id': '1058071', 'text': 'Tamatekraal'},
+                {'Tot': 0, 'id': '1058072', 'text': 'Tempro'},
+                {'Tot': 0, 'id': '1058073', 'text': 'Tierkloof'},
+                {'Tot': 0, 'id': '1058074', 'text': 'Toekomst'},
+                {'Tot': 0, 'id': '1058075', 'text': 'Tolbos'},
+                {'Tot': 0, 'id': '1058076', 'text': 'Tussenberge'},
+                {'Tot': 0, 'id': '1058077', 'text': 'Tweedam'},
+                {'Tot': 0, 'id': '1058078', 'text': 'Tweelingskop'},
+                {'Tot': 0, 'id': '1058079', 'text': 'Uintjieskuil'},
+                {'Tot': 0, 'id': '1058080', 'text': 'Uitkyk'},
+                {'Tot': 0, 'id': '1058081', 'text': 'Uitsig'},
+                {'Tot': 0, 'id': '1058082', 'text': 'Vaalpan'},
+                {'Tot': 0, 'id': '1058083', 'text': 'Van der Stelskraal'},
+                {'Tot': 0, 'id': '1058084', 'text': 'Vissersdrift'},
+                {'Tot': 0, 'id': '1058085', 'text': 'Vlakkloof'},
+                {'Tot': 0, 'id': '1058086', 'text': 'Vlooikraal'},
+                {'Tot': 0, 'id': '1058087', 'text': 'Vogelgezang'},
+                {'Tot': 0, 'id': '1058088', 'text': 'Vogellvlei'},
+                {'Tot': 0, 'id': '1058089', 'text': 'Voorhoede'},
+                {'Tot': 0, 'id': '1058090', 'text': 'Voorskiet'},
+                {'Tot': 0, 'id': '1069087', 'text': 'Waboomsdrift'},
+                {'Tot': 0, 'id': '1058091', 'text': 'Waenhuiskrans'},
+                {'Tot': 0, 'id': '1058092', 'text': 'Waterskilpadsrivier'},
+                {'Tot': 0, 'id': '1058093', 'text': 'Welgegund'},
+                {'Tot': 0, 'id': '1058094', 'text': 'Wiesdrif'},
+                {'Tot': 0, 'id': '1058095', 'text': 'Windhoek'},
+                {'Tot': 0, 'id': '1058096', 'text': 'Witklip'},
+                {'Tot': 0, 'id': '1069088', 'text': 'Witklippieskloof'},
+                {'Tot': 0, 'id': '1058097', 'text': 'Witwater'},
+                {'Tot': 0, 'id': '1058098', 'text': 'Wyoming'},
+                {'Tot': 0, 'id': '1058099', 'text': 'Zeekoeivlei'},
+                {'Tot': 0, 'id': '1058100', 'text': 'Zoetendals Vallei'},
+                {'Tot': 0, 'id': '1058101', 'text': 'Zwelitsha'}],
+               'Total': 187}
+              </code>
+              <li>Get Schedule</li>
+              <code>eskom.GetSchedule(id,provincenumber)</code>
+              <p>where id is SuburbID and provincenumber is number of province<br> it returns if SuburbID is 1061287 and Province Number is 2</p>
+              <br>
+              <code>{'index': [0, 1, 2], 'starttime': ['00:00', '08:00', '16:00'], 'endtime': ['04:30', '10:30', '18:30']}</code>
+            </section>
+            <section class="main-section" id="WebUsage">
+              <header>Web Hooks</header>
+              <hr>
+              <a class="nav-link" href="#PythonUsage">Read Python Usage first</a>
+              <br>
+              <h6>Basically you are gonna call my website adgstudios.co.za/api/v1/EskomAPI/functionname/(var1)/(var2)/(nth var) <br> to use my functions</h6>
+              <br>
+              <h6>Example in Node.js</h6>
+              <code>
+                const request = require('request');
+                request('https://adgstudios.co.za/api/v1/EskomAPI/functionname/GetSuburbData/340', function (error, response, body) {
+                  console.error('error:', error); // Print the error if one occurred
+                  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+                  console.log('body:', body); // Print the HTML for the Google homepage.
+                });
+              </code>
+              <br>
+              <h6>Example in React.js</h6>
+              <code>
+                fetch('https://adgstudios.co.za/api/v1/EskomAPI/functionname/GetSuburbData/340')
+                .then(response => response.json())
+                .then(data => this.setState({ data: data.feed }));
+              </code>
+              <br>
+              <h6>Example in C#</h6>
+              <code>
+                private static readonly HttpClient client = new HttpClient();
+
+                var responseString = await client.GetStringAsync("https://adgstudios.co.za/api/v1/EskomAPI/functionname/GetSuburbData/340");
+                });
+              </code>
+            </section>
+            <section class="main-section" id="Acknowledgments">
+              <header>Acknowledgments</header>
+              <br>
+              <h5>This package is written by Ashlin Darius Govindasamy and ADGSTUDIOS is a company owned by him.</h5>
+              <br>
+              <h8>Logo and Data bootstrapped is Copyright © Eskom Holdings SOC Limited Reg No 2002/015527/30. All rights reserved</h8>
+              <br>
+              <br>
+              <h7>(c) ADGSTUDIOS 2021 All rights reserved.</h7>
+            </section>
+
+           
+          </main>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+      integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"></script>
+  </body>
+
+  </html>
+  <!-- partial -->
+
+</body>
+
+</html>
