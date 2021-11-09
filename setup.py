@@ -14,5 +14,5 @@ setup(
         "Operating System :: OS Independent",
     ],
     license='MIT', 
-    install_requires=["requests","BeautifulSoup"]
+    install_requires=["requests","beautifulsoup4"]
 )
