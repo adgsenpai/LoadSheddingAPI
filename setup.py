@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="EskomAPI",
-    version="0.0.1",
+    version="0.0.2",
     author="Ashlin Darius Govindasamy",
     author_email="adgrules@hotmail.com",
     url="https://adgstudios.co.za",
@@ -14,5 +14,5 @@ setup(
         "Operating System :: OS Independent",
     ],
     license='MIT', 
-    install_requires=["requests","BeautifulSoup"]
+    install_requires=["requests","beautifulsoup4"]
 )
