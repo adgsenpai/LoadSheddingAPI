@@ -6,7 +6,7 @@
 
 # Documentation Link
 
-<https://adgsenpai.github.io/LoadSheddingAPI/#Introduction">
+<https://adgsenpai.github.io/LoadSheddingAPI/#Introduction>
 
 ###### On production, while under production feel free to view the documentation to help you on how to use the data that i am bootstrapping from.
 
