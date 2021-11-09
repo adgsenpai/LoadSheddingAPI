@@ -8,7 +8,7 @@
 
 <https://adgsenpai.github.io/LoadSheddingAPI/#Introduction>
 
-###### On production, while under production feel free to view the documentation to help you on how to use the data that i am bootstrapping from.
+###### Bootstrapped Guide from
 
 you can find it here
 <https://github.com/adgsenpai/LoadSheddingAPI/blob/main/eskomrestapidoc.md>
