@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def ReturnLoadSheddingStatus():
-  return requests.get('https://loadshedding.eskom.co.za/LoadShedding/GetStatus').text
+  return str(int(requests.get('https://loadshedding.eskom.co.za/LoadShedding/GetStatus').text)-1)
 
 def GetMunicipalities(id):
     errortext = 'Try using the number id for province in parameter to return a valid json object. 1 = Eastern Cape ,2 = Free State , 3 = Gauteng ,4 = KwaZulu-Natal, 5 = Limpopo, 6 = Mpumalanga , 7 = North West , 8 = Northern Cape, 9 = Western Cape'
