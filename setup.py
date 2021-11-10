@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="EskomAPI",
-    version="0.0.2",
+    version="0.0.3",
     author="Ashlin Darius Govindasamy",
     author_email="adgrules@hotmail.com",
     url="https://adgstudios.co.za",
